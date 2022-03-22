@@ -11,7 +11,7 @@ function changeTextToElapsedTime() {
     let elapsed_min = Math.floor(elapsed_ms / ms_to_min);
     elapsed_ms %= ms_to_min;
     let elapsed_sec = Math.floor(elapsed_ms / ms_to_sec)
-    let text = "" + elapsed_hour + ":" + elapsed_min + ":" + elapsed_sec;
+    let text = "" + elapsed_hour + ":" + elapsed_min.toString().padStart(2, '0') + ":" + elapsed_sec.toString().padStart(2, '0');
     var elm = document.getElementById("elapsed_time");
     elm.innerText = text;
 }
