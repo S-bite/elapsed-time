@@ -15,5 +15,11 @@ function changeTextToElapsedTime() {
     var elm = document.getElementById("elapsed_time");
     elm.innerText = text;
 }
+function copyToClipboard() {
+    let elm = document.getElementById("elapsed_time");
+    navigator.clipboard.writeText(elm.innerText);
+    elm = document.getElementById("copy_button");
+    elm.innerText = "Copied!";
+}
 changeTextToElapsedTime();
 setInterval(changeTextToElapsedTime, 1000);
